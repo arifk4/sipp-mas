@@ -1,79 +1,99 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
-$primary-font : 'Open Sans', sans-serif;
-html,body{
-  background-color: $base--background;
-  height: 100%;
-  overflow: hidden;
-  font-size: 12px;
-  font-family: $primary-font;
-  font-weight: 300;
-  &.mainpage{
-    padding-top: 70px;
-    overflow: auto;
-    background-color: $base-background-main;
-  }
+$primary-font: 'Open Sans',
+sans-serif;
+html,
+body {
+    background-color: $base--background;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    font-family: $primary-font;
+    font-weight: 300;
+    &.mainpage {
+        padding-top: 70px;
+        overflow: auto;
+        background-color: $base-background-main;
+    }
 }
-a{color: $color-dark};
-.padding-none {padding: 0px};
-.fill-height{
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
+a {
+    color: $color-dark
+};
+.padding-none {
+    padding: 0px
+};
+.fill-height {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
 };
 .body-film {
-  min-height: 100%;
-  overflow-y: scroll;
+    min-height: 100%;
+    overflow-y: scroll;
 }
-.container-main, .container-nopa{
-  &:before{
-    display: table;
-    content: "";
-  }
-  &:after{
-    clear: both;
-  }
+.container-main,
+.container-nopa {
+    &:before {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
 }
 .container-nopa {
-  min-height: 100%;
-  padding: 0px;
-  margin-right: auto;
-  margin-left: auto;
+    min-height: 100%;
+    padding: 0px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.container-main{
-  width: 1280px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.container-main {
+    width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.content-wrapper{
-  height: 100%;
+.content-wrapper {
+    height: 100%;
 }
-.wellslider{
-  width: 100%;
+.wellslider {
+    width: 100%;
 }
-.panel-white{
-  .search{
-    padding-top: 10px;
-    margin-bottom: 20px;
-  }
+.panel-white {
+    .search,
+    .editBtn {
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
 }
-table{
-  cursor: pointer;
+table {
+    cursor: pointer;
 }
-small{
-  font-size: 14px;
+small {
+    font-size: 14px;
 }
-label{
-  font-weight: 300;
-  font-size: 14px;
+label {
+    font-weight: 300;
+    font-size: 14px;
 }
 .table {
     tbody {
-      tr{
-        &:hover, &:focus{
-          background-color: #f7f7f7;
+        tr {
+            &:hover,
+            &:focus {
+                background-color: #f7f7f7;
+            }
         }
-      }
     }
 }
+.without-padding {
+    padding: 0
+};
+.disable {
+    background-color: #EEEEEE;
+    tbody{
+        tr{
+            &:hover { background-color: #EEEEEE !important;}           
+        }
+    }
+};

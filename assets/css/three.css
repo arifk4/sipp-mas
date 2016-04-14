@@ -21,7 +21,7 @@ a { color: #363636; }
 
 .wellslider { width: 100%; }
 
-.panel-white .search { padding-top: 10px; margin-bottom: 20px; }
+.panel-white .search, .panel-white .editBtn { padding-top: 10px; margin-bottom: 20px; }
 
 table { cursor: pointer; }
 
@@ -30,6 +30,11 @@ small { font-size: 14px; }
 label { font-weight: 300; font-size: 14px; }
 
 .table tbody tr:hover, .table tbody tr:focus { background-color: #f7f7f7; }
+
+.without-padding { padding: 0; }
+
+.disable { background-color: #EEEEEE; }
+.disable tbody tr:hover { background-color: #EEEEEE !important; }
 
 .login input { display: block; padding: 15px 10px; margin-bottom: 10px; width: 100%; border: 1px solid #ddd; transition: border-width 0.2s ease; border-radius: 2px; color: #ccc; }
 .login input + i.fa { color: #fff; font-size: 1em; position: absolute; margin-top: -47px; opacity: 0; left: 0; transition: all 0.1s ease-in; }
@@ -58,6 +63,18 @@ label { font-weight: 300; font-size: 14px; }
 .wrapper { display: flex; align-items: center; flex-direction: column; justify-content: center; width: 100%; min-height: 100%; padding: 20px; }
 
 .sliderpane { padding: 0; position: fixed; top: 0; bottom: 0; left: 0; background-color: #e74c3c; }
+@keyframes slidy { 0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; } }
+.sliderpane #slider { overflow: hidden; }
+.sliderpane #slider figure img { width: 20%; float: left; }
+.sliderpane #slider figure { position: relative; width: 500%; margin: 0; left: 0; text-align: left; font-size: 0; animation: 20s slidy infinite; }
 
 .navbar-three { background-color: #2ecc71; border-color: #e7e7e7; color: #fff; margin-bottom: 0px; }
 
