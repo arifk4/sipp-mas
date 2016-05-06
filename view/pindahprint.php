@@ -1,7 +1,10 @@
 <?php
 ob_start();
 //Koneksi ke database
-include("../config/config.php");
+
+include("../lib/config/connect.php");
+$sql=mysql_query("SELECT * FROM pindah");
+$data=mysql_fetch_assoc($sql);
 ?>
 
 <html>
@@ -11,28 +14,28 @@ include("../config/config.php");
   <link href="../assets/css/print.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-    <br><br>
+    <br>
     <h3>Surat Keterangan Pindah Datang WNI</h3><br>
           <form class="form-horizontal">
-            
-            <table id="KK-induk" border="0">
+          <?php
+          echo '<table id="KK-induk" border="0">
               <tr>
                 <td><h4>Daerah Asal</h4></td>
               </tr>
               <tr>
                 <td><label class="col-sm-4 control-label">Nomor Kartu Keluarga</label></td>
                 <td>:</td>
-                <td>325327515848959425</td>
+                <td>'.$data['nokk'].'</td>
               </tr>
              <tr>
                 <td><label class="col-sm-4 control-label">Nama Kepala Keluarga</label></td>
                 <td>:</td>
-                <td>Romy Vergyano Surya Arifka</td>
+                <td>'.$data['namakk'].'</td>
               </tr>
               <tr>
                 <td><label class="col-sm-4 control-label">Alamat</label></td>
                 <td>:</td>
-                <td>Jl. Halmahera Selatan III A no. 43</td>
+                <td>'.$data['alamat'].'</td>
                 <td>RT/RW</td>
                 <td>:</td>
                 <td>011/004</td>
@@ -40,27 +43,27 @@ include("../config/config.php");
               <tr>
                 <td><label class="col-sm-4 control-label">Desa/Kelurahan</label></td>
                 <td>:</td>
-                <td>Mliriprowo</td>
+                <td>'.$data['desa'].'</td>
               </tr>
               <tr>
                 <td><label class="col-sm-4 control-label">Kabupaten</label></td>
                 <td>:</td>
-                <td>Sidoarjo</td>
+                <td>'.$data['kab'].'</td>
               </tr>
               <tr>
                 <td><label class="col-sm-4 control-label">Provinsi</label></td>
                 <td>:</td>
-                <td>Jawa Timur</td>
+                <td>'.$data['prov'].'</td>
               </tr>
               <tr>
                 <td><label class="col-sm-4 control-label">Kode Pos</label></td>
                 <td>:</td>
-                <td>61265</td>
+                <td>'.$data['kodepos'].'</td>
               </tr>
               <tr>
                 <td><label class="col-sm-4 control-label">Telepon/HP</label></td>
                 <td>:</td>
-                <td>0318746723</td>
+                <td>'.$data['telp'].'</td>
               </tr>
               <tr>
                 <td><h4>Data Kepindahan</h4></td>
@@ -131,7 +134,8 @@ include("../config/config.php");
               <tr>
                 <td><label class="col-sm-4 control-label">Keluarga Yang Pindah</label></td>
               </tr>
-            </table>
+            </table>';
+            ?>
           </form>
           <br>
            <table id="KK-Pindah">
@@ -158,7 +162,9 @@ include("../config/config.php");
            </table>
            <br><br><br><br><br><br><br><br><br>
            <table>
-           
+              <tr>
+                <td><h4>Data Daerah Tujuan</h4></td>
+              </tr>
             <tr>
                 <td><label class="col-sm-4 control-label">Nomor Kartu Keluarga</label></td>
                 <td>:</td>
@@ -224,13 +230,12 @@ include("../config/config.php");
                   </tr>  
            </table>
           <br><br>
-          <table id="ttd">
+          <table id="ttd-bawah">
             <tr>
               <td><label>Diketahui Oleh,</label><br><br><br><br><br><br><label>Aan Alifuansyah S.Sos</label></td>
-              <td><label>Pemohon,</label><br><br><br><br><br><br><label>Romy Vergyano</label></td>
               <td><label>Dikeluarkan Oleh,</label><br><label>Kepala desa/Lurah Mliriprowo</label><br><br><br><br><br><label>Ir. Dahlan</label></td>
             </tr>
-           </table>
+          </table>
 </body>
 </html>
  
@@ -243,5 +248,5 @@ $mpdf->SetDisplayMode('fullpage');
 $stylesheet = file_get_contents('../lib/mpdf/mpdf.css');
 $mpdf->WriteHTML($stylesheet,1);
 $mpdf->WriteHTML($out);
-$mpdf->Output();
+$mpdf->Output('surat_pindah_datang.pdf','I');
 ?>
