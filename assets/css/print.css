@@ -1,32 +1,13 @@
-h3 {
-    text-align: center;
-    padding: 5px;
-    margin-top: 100px;
-}
-
-h4 {
-    padding: 0px;
-    margin: 0px;
-}
-td {
-    padding: 4px;
-    /* margin-right: 20px; */
-}
-
-label.col-sm-4.control-label {
-    margin-right: 0px;
-    padding: 0px 0px 0px 50px;
-}
-
-table#KK-Pindah {
-    margin: 0px 0px 0px 55px;
-    padding: 0px 0px 0px 0px;
-    border: 1px solid black;
-}
-#ttd {
-    padding: 0px 0px 0px 0px;
-}
-
-#jed {
-    padding: 0px 0px 0px 100px;
-}
+body {font-family: Arial; font-size: 12pt;}
+h3 { text-align: center; padding: 5px; margin-top: 20px;}
+h4 {padding: 0px;margin: 0px;}
+td {padding: 4px; /* margin-right: 20px; */}
+table {font-size: 10px;}
+#bd1 {border: 1px solid black;}
+label.col-sm-4.control-label {margin-right: 0px; padding: 0px 0px 0px 50px;}
+table#KK-Pindah {margin: 0px 0px 0px 55px; padding: 0px 0px 0px 0px; border: 1px solid black;}
+#ttd {padding: 0px 0px 0px 0px;}
+#surat {padding: 0px 0px 0px 0px; font-size: 14px; font-family: serif;}
+#suratpin {text-align: justify; padding-bottom: 2px; font-size:16px;}
+#jed {padding: 0px 0px 0px 100px;}
+#ttd-bawah {padding: 0px 0px 0px 0px;}
