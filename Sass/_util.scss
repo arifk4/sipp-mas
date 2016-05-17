@@ -93,7 +93,44 @@ label {
     background-color: #EEEEEE;
     tbody{
         tr{
-            &:hover { background-color: #EEEEEE !important;}           
+            &:hover { background-color: #EEEEEE !important;}
         }
     }
 };
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-justify
+.divider-dot{
+    border-top: 1px dotted black;
+}
+.lg-icon{
+    font-size: 44px;
+    color: #3C3C3C;
+}
+.md-icon{
+    font-size: 22px;
+    color: #3C3C3C;
+}
+.row+.row{
+    margin-top: 10px;
+}
+.list{
+    list-style: none;
+    .listview{
+        background-color: #fafafa;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #C5C9CA;
+        .big{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .row{
+            margin: 0;
+        }
+    }
+}

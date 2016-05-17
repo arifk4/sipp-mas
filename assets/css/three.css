@@ -36,6 +36,23 @@ label { font-weight: 300; font-size: 14px; }
 .disable { background-color: #EEEEEE; }
 .disable tbody tr:hover { background-color: #EEEEEE !important; }
 
+.text-center { text-align: center; }
+
+.text-left { text-align: left; }
+
+.text-justify .divider-dot { border-top: 1px dotted black; }
+
+.lg-icon { font-size: 44px; color: #3C3C3C; }
+
+.md-icon { font-size: 22px; color: #3C3C3C; }
+
+.row + .row { margin-top: 10px; }
+
+.list { list-style: none; }
+.list .listview { background-color: #fafafa; padding: 10px; margin-bottom: 10px; border-bottom: 1px solid #C5C9CA; }
+.list .listview .big { font-size: 18px; font-weight: 400; }
+.list .listview .row { margin: 0; }
+
 .login input { display: block; padding: 15px 10px; margin-bottom: 10px; width: 100%; border: 1px solid #ddd; transition: border-width 0.2s ease; border-radius: 2px; color: #ccc; }
 .login input + i.fa { color: #fff; font-size: 1em; position: absolute; margin-top: -47px; opacity: 0; left: 0; transition: all 0.1s ease-in; }
 .login input:focus { outline: none; color: #444; border-color: #2196F3; border-left-width: 35px; }
@@ -61,6 +78,14 @@ label { font-weight: 300; font-size: 14px; }
 .panel.panel-footer { height: 50px; width: 100%; position: fixed; bottom: 0; left: 0; border-top: 2px solid #e67e22; display: none; border-radius: 0; margin-bottom: 0; }
 
 .wrapper { display: flex; align-items: center; flex-direction: column; justify-content: center; width: 100%; min-height: 100%; padding: 20px; }
+
+.card { position: relative; background-color: #FFF; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); min-height: 20px; padding: 11px; }
+.card.card-compact { padding: 10px; font-size: 14px; width: 60%; display: inline-block; }
+.card.card-compact hr { width: 100px; height: 1px; border-top: 1px dashed #ddd; margin: 12px auto; }
+.card .card-edit { position: absolute; right: 10px; width: 40px; height: 30px; padding-top: 5px; background: #D8D8D8; top: 0; }
+.card .sub-card { background-color: #f4f4f4; overflow: auto; padding: 24px 0 18px; margin: -10px; }
+.card .card-md-title { font-size: 18px; font-weight: 700; text-align: left; margin-left: 15px; }
+.card .card-title { font-size: 26px; font-weight: 400; }
 
 .sliderpane { padding: 0; position: fixed; top: 0; bottom: 0; left: 0; background-color: inherit; }
 
