@@ -126,11 +126,19 @@ label {
         margin-bottom: 10px;
         border-bottom: 1px solid #C5C9CA;
         .big{
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 400;
+        }
+        .midi{
+            font-size: 14px;
+            font-weight: 500;
         }
         .row{
             margin: 0;
         }
     }
+}
+.modal-content{
+    border-radius: 0;
+    padding: 20px;
 }
