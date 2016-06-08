@@ -1,7 +1,11 @@
-@import 'color';
-@import 'util';
-@import 'input';
-@import 'button';
-@import 'panel';
-@import 'slider';
-@import 'navbar';
+// Module
+@import 'modules/color';
+@import 'modules/util';
+@import 'modules/variable';
+
+// Partial
+@import 'partials/input';
+@import 'partials/button';
+@import 'partials/panel';
+@import 'partials/slider';
+@import 'partials/navbar';
