@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+@media screen and (min-width: 360px) { .mobile.hide { display: none; }
+  .mobile.show { display: block; } }
 html, body { background-color: #fafafa; height: 100%; overflow: hidden; font-size: 12px; font-family: "Open Sans", sans-serif; font-weight: 300; }
 html.mainpage, body.mainpage { padding-top: 70px; overflow: auto; background-color: #ECF0F1; }
-
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 a { color: #363636; }
 

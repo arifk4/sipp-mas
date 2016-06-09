@@ -1,6 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
-$primary-font: 'Open Sans',
-sans-serif;
+$primary-font: 'Open Sans',sans-serif;
+
+@media #{$common-device}{
+    .mobile {
+        &.hide{
+            display: none;
+        }
+        &.show{
+            display: block;
+        }
+    }
+
+}
+
 html,
 body {
     background-color: $base--background;
@@ -14,11 +26,6 @@ body {
         overflow: auto;
         background-color: $base-background-main;
     }
-}
-*{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 a {
     color: $color-dark
