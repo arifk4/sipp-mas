@@ -38,7 +38,7 @@
           }
         }
       }
-    };
+    }
     .navbar-right{ margin-right: 0;}
     .breadcrumb{
       margin-top: -20px;
@@ -55,4 +55,13 @@
         }
     }
     .dropdown-menu{ background-color: #545454;}
+}
+
+@media #{$desktop}{
+    .breadcrumb{
+      background-color: #fafafa;
+      li, a, .active{
+          color: #363636;
+      }
+    }
 }
